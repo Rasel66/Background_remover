@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Removed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-300 to-blue-500 flex items-center justify-center min-h-screen px-4">
+
+  <div class="bg-white shadow-2xl rounded-2xl p-6 sm:p-10 w-full max-w-5xl">
+    <h1 class="text-2xl sm:text-3xl font-bold text-center text-blue-900 mb-6">Your Image is Ready 🎉</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+      <div class="text-center">
+        <h2 class="font-semibold mb-2">Original</h2>
+        <img src="{{ original_url }}" alt="Original" class="rounded-xl shadow max-h-80 mx-auto">
+      </div>
+      <div class="text-center">
+        <h2 class="font-semibold mb-2">Processed</h2>
+        <img src="{{ processed_url }}" alt="Processed" class="rounded-xl shadow bg-gray-100 max-h-80 mx-auto">
+        
+        <div class="mt-4">
+          <a href="{{ processed_url }}" download 
+             class="inline-block bg-green-600 text-white px-5 py-2 rounded-lg shadow hover:bg-green-700 transition text-sm sm:text-base">
+            ⬇ Download PNG
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <a href="/" class="bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition text-sm sm:text-base">
+        Try Another Image
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
