@@ -14,7 +14,11 @@ SECRET_KEY = 'django-insecure-hm2&mf*$t*_q1^bi08&bfsn)zm#55v!65f+%&1qevr_dy(#yfn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "127.0.0.1", 
+    "localhost",
+    "https://background-remover-apps.onrender.com",
+]
 
 
 # Application definition
