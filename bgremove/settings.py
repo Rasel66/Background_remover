@@ -17,7 +17,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "127.0.0.1", 
     "localhost",
-    "https://background-remover-apps.onrender.com",
+    "background-remover-apps.onrender.com",
 ]
 
 
