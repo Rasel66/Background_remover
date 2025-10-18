@@ -1,7 +1,7 @@
 import os
 from django.shortcuts import render, redirect
 from django.conf import settings
-from rembg import remove
+from rembg import remove, new_session
 from PIL import Image
 from .forms import ImageUploadForm
 from .models import ImageUpload
@@ -14,7 +14,8 @@ def upload_image_view(request):
         if form.is_valid():
             instance = form.save(commit=False)
             input_image = Image.open(instance.original)
-            output_image = remove(input_image)
+            session = new_session("u2netp")
+            output_image = remove(input_image, session=session)
 
             processed_path = os.path.join(settings.MEDIA_ROOT, 'processed', os.path.basename(instance.original.name))
             os.makedirs(os.path.dirname(processed_path), exist_ok=True)
